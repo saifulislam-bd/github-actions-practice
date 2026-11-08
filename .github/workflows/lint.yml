@@ -1,0 +1,12 @@
+name: Auto Linter
+
+on: 
+  push: 
+    paths: "*.js"
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cloning the code
+        uses: actions/checkout@v7
