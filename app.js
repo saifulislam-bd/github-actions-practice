@@ -1,4 +1,4 @@
-// This is a simple Node app
+// This is a simple Node app for linting
 //It is for testing purpose
 
 import express from "express";
