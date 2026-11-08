@@ -10,3 +10,9 @@ jobs:
     steps:
       - name: Cloning the code
         uses: actions/checkout@v7
+        
+      - name: Install Linter 
+        run: npm install eslint --save-dev
+
+
+       
