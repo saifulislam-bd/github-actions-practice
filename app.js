@@ -1,3 +1,5 @@
+# This is a simple Node app
+
 import express from "express";
 import cookieParser from "cookie-parser";
 import authRoutes from "./routes/auth.routes.js";
