@@ -1,5 +1,5 @@
 # This is a simple Node app
-# for testing
+// it is for testing
 
 import express from "express";
 import cookieParser from "cookie-parser";
