@@ -1,21 +1,27 @@
 name: Auto Linter
 
-on: 
-  push: 
-    paths: "*.js"
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
-  code:
+  lint:
+    name: Run ESLint
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
     steps:
-      - name: Cloning the code
-        uses: actions/checkout@v7
-        
-      - name: Install Linter 
-        run: npm install eslint --save-dev
-        
-      - name: Check the files for linting
-        run: npx eslint .
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
-       
+      - name: Run ESLint on the fly
+        run: npx eslint@latest .
